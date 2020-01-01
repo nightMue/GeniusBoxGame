@@ -21,65 +21,65 @@ final _highSide = 6;
 int next(int min, int max) => min + _random.nextInt(max - min);
 
 Dice d1 = new Dice([
-  Pair("A",3),
-  Pair("C",2),
-  Pair("B",2),
-  Pair("B",3),
-  Pair("B",1),
-  Pair("A",2),
+  Pair(1,3),
+  Pair(3,2),
+  Pair(2,2),
+  Pair(2,3),
+  Pair(2,1),
+  Pair(1,2),
 ]);
 
 Dice d2 = new Dice([
-  Pair("D",5),
-  Pair("F",5),
-  Pair("E",5),
-  Pair("F",4),
-  Pair("E",4),
-  Pair("E",6),
+  Pair(4,5),
+  Pair(6,5),
+  Pair(5,5),
+  Pair(6,4),
+  Pair(5,4),
+  Pair(5,6),
 ]);
 
 Dice d3 = new Dice([
-  Pair("F",2),
-  Pair("E",1),
-  Pair("F",2),
-  Pair("B",6),
-  Pair("A",5),
-  Pair("A",5),
+  Pair(6,2),
+  Pair(5,1),
+  Pair(6,2),
+  Pair(2,6),
+  Pair(1,5),
+  Pair(1,5),
 ]);
 
 Dice d4 = new Dice([
-  Pair("D",6),
-  Pair("B",5),
-  Pair("F",6),
-  Pair("C",6),
-  Pair("C",5),
-  Pair("A",4),
+  Pair(4,6),
+  Pair(2,5),
+  Pair(6,6),
+  Pair(3,6),
+  Pair(3,5),
+  Pair(1,4),
 ]);
 
 Dice d5 = new Dice([
-  Pair("A",6),
-  Pair("F",1),
-  Pair("F",1),
-  Pair("F",1),
-  Pair("A",6),
-  Pair("A",6),
+  Pair(1,6),
+  Pair(6,1),
+  Pair(6,1),
+  Pair(6,1),
+  Pair(1,6),
+  Pair(1,6),
 ]);
 
 Dice d6 = new Dice([
-  Pair("E",3),
-  Pair("D",3),
-  Pair("D",4),
-  Pair("C",3),
-  Pair("B",4),
-  Pair("C",4),
+  Pair(5,3),
+  Pair(4,3),
+  Pair(4,4),
+  Pair(3,3),
+  Pair(2,4),
+  Pair(3,4),
 ]);
 
 Dice d7 = new Dice([
-  Pair("E",2),
-  Pair("C",1),
-  Pair("F",3),
-  Pair("D",2),
-  Pair("D",1),
-  Pair("A",1),
+  Pair(5,2),
+  Pair(3,1),
+  Pair(6,3),
+  Pair(4,2),
+  Pair(4,1),
+  Pair(1,1),
 ]);
 

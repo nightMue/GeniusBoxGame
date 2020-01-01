@@ -1,6 +1,6 @@
 class Pair {
-  final String letter;
-  final int number;
+  final int row;
+  final int column;
 
-  Pair(this.letter, this.number);
+  Pair(this.row, this.column);
 }

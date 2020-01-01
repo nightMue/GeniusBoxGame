@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:genius_square/widgets/blocks/blockA.dart';
 import 'package:genius_square/widgets/blocks/blockB.dart';
