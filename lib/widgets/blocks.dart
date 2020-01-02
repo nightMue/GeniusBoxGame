@@ -47,10 +47,28 @@ class _BlocksState extends State<Blocks> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white24,
+      color: Colors.transparent,
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          bA, bB, bC, bD, bE, bF, bG, bH, bI,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              bA, bB, bC
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              bD, bE, bF
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              bG, bH, bI
+            ],
+          ),
         ],
       ),
     );

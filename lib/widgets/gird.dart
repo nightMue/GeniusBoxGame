@@ -61,7 +61,7 @@ class _GridState extends State<Grid> {
           child: Container(
               //height: (MediaQuery.of(context).size.height - 25) / 2,
               height: gridDemension,
-              color: Colors.blue,
+              color: Colors.transparent,
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[

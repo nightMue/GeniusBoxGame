@@ -4,6 +4,7 @@ import 'package:genius_square/core/utils.dart';
 import 'package:genius_square/widgets/gird.dart';
 import 'package:genius_square/widgets/peg.dart';
 import 'package:genius_square/widgets/empty.dart';
+import 'package:genius_square/widgets/startScreenAnimation/animatedBackground.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -97,15 +98,20 @@ class _MainScreenState extends State<MainScreen> {
           ),
         ),
       ),
-      body: Grid(
-        pairs: _rolledDice,
-        r1: row1,
-        r2: row2,
-        r3: row3,
-        r4: row4,
-        r5: row5,
-        r6: row6,
-      ),
+      body: Stack(
+        children: <Widget>[
+          Positioned.fill(child: AnimatedBackground()),
+          Grid(
+            pairs: _rolledDice,
+            r1: row1,
+            r2: row2,
+            r3: row3,
+            r4: row4,
+            r5: row5,
+            r6: row6,
+          ),
+        ],
+      ),  
       floatingActionButton: FloatingActionButton(
         onPressed: _rollDice,
         tooltip: 'Roll Dice',
