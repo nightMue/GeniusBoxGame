@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:genius_square/core/models/block.dart';
-import 'package:genius_square/core/models/empty.dart';
 import 'package:genius_square/core/models/pair.dart';
-import 'package:genius_square/core/models/peg.dart';
 import 'package:genius_square/widgets/blocks.dart';
 
 class Grid extends StatefulWidget {
@@ -18,19 +15,19 @@ class Grid extends StatefulWidget {
   }) : super(key: key);
 
   final List<Pair> pairs;
-  final List<Block> r1;
-  final List<Block> r2;
-  final List<Block> r3;
-  final List<Block> r4;
-  final List<Block> r5;
-  final List<Block> r6;
+  final List<Widget> r1;
+  final List<Widget> r2;
+  final List<Widget> r3;
+  final List<Widget> r4;
+  final List<Widget> r5;
+  final List<Widget> r6;
 
   @override
   _GridState createState() => _GridState(r1, r2, r3, r4, r5, r6);
 }
 
 class _GridState extends State<Grid> {
-  _GridState(List<Block> r1,List<Block> r2,List<Block> r3,List<Block> r4,List<Block> r5,List<Block> r6,){
+  _GridState(List<Widget> r1,List<Widget> r2,List<Widget> r3,List<Widget> r4,List<Widget> r5,List<Widget> r6,){
     row1 = r1;
     row2 = r2;
     row3 = r3;
@@ -38,12 +35,12 @@ class _GridState extends State<Grid> {
     row5 = r5;
     row6 = r6;
   }
-  List<Block> row1 = List<Block>();
-  List<Block> row2 = List<Block>();
-  List<Block> row3 = List<Block>();
-  List<Block> row4 = List<Block>();
-  List<Block> row5 = List<Block>();
-  List<Block> row6 = List<Block>();
+  List<Widget> row1 = List<Widget>();
+  List<Widget> row2 = List<Widget>();
+  List<Widget> row3 = List<Widget>();
+  List<Widget> row4 = List<Widget>();
+  List<Widget> row5 = List<Widget>();
+  List<Widget> row6 = List<Widget>();
 
  
 
@@ -143,17 +140,15 @@ class _GridState extends State<Grid> {
   }
 }
 
-Widget _box(String text, double demension, Block fillBlock) {
+Widget _box(String text, double demension, Widget fillBlock) {
   return Container(
     width: demension,
     height: demension,
     decoration:
         BoxDecoration(
           border: Border.all(color: Colors.black, width: 2),
-          color: fillBlock.color
+          color: Colors.white
         ),
-    child: Center(
-      child: Text(text),
-    ),
+    child: fillBlock
   );
 }

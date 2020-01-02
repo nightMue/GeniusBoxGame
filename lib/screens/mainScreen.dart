@@ -1,12 +1,9 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
-import 'package:genius_square/core/models/block.dart';
-import 'package:genius_square/core/models/empty.dart';
 import 'package:genius_square/core/models/pair.dart';
-import 'package:genius_square/core/models/peg.dart';
 import 'package:genius_square/core/utils.dart';
 import 'package:genius_square/widgets/gird.dart';
+import 'package:genius_square/widgets/peg.dart';
+import 'package:genius_square/widgets/empty.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -18,12 +15,12 @@ class _MainScreenState extends State<MainScreen> {
     _resetGrid();
   }
   List<Pair> _rolledDice = new List<Pair>();
-  List<Block> row1 = List<Block>();
-  List<Block> row2 = List<Block>();
-  List<Block> row3 = List<Block>();
-  List<Block> row4 = List<Block>();
-  List<Block> row5 = List<Block>();
-  List<Block> row6 = List<Block>();
+  List<Widget> row1 = List<Widget>();
+  List<Widget> row2 = List<Widget>();
+  List<Widget> row3 = List<Widget>();
+  List<Widget> row4 = List<Widget>();
+  List<Widget> row5 = List<Widget>();
+  List<Widget> row6 = List<Widget>();
 
   _resetGrid() {
     row1.clear();
@@ -64,18 +61,20 @@ class _MainScreenState extends State<MainScreen> {
     }
   }
 
-  _addPegTo(int row, int column, List<Block> listToAddTo) {
-    var p1 = Peg(row, column);
-    p1.setColor(Colors.grey);
+  _addPegTo(int row, int column, List<Widget> listToAddTo) {
+    //var p1 = Peg(row, column);
+    //p1.setColor(Colors.grey);
     //listToAddTo.add(p1);
-    listToAddTo.insert(column, p1);
+    var text = row.toString() + "-" + column.toString();
+    listToAddTo.insert(column, Peg(title: text));
   }
 
-  _addEmptyTo(int row, int column, List<Block> listToAddTo) {
-    var e1 = Empty(row, column);
-    e1.setColor(Colors.white);
+  _addEmptyTo(int row, int column, List<Widget> listToAddTo) {
+    //var e1 = Empty(row, column);
+    //e1.setColor(Colors.white);
     //listToAddTo.add(e1);
-    listToAddTo.insert(column - 1, e1);
+    var text = row.toString() + "-" + column.toString();
+    listToAddTo.insert(column - 1, Empty(title: text));
   }
 
   void _rollDice() {
@@ -109,7 +108,7 @@ class _MainScreenState extends State<MainScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _rollDice,
-        tooltip: 'Increment',
+        tooltip: 'Roll Dice',
         child: Icon(Icons.rotate_left),
       ),
     );
