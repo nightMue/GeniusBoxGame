@@ -16,7 +16,27 @@ class _BlockBState extends State<BlockB> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text(widget.dimension.toString()),
+      child: Row(
+        children: <Widget>[
+          Container(
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.white, width: 1),
+              color: Colors.purple
+            ),
+            width: widget.dimension,
+            height: widget.dimension,
+          ),
+          Container(
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.white, width: 1),
+              color: Colors.purple
+            ),
+            width: widget.dimension,
+            height: widget.dimension,
+          )
+        ],
+      ),
+      //child: Text(widget.dimension.toString()),
     );
   }
 }

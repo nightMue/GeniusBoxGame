@@ -13,10 +13,17 @@ class BlockA extends StatefulWidget {
 }
 
 class _BlockAState extends State<BlockA> {
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text(widget.dimension.toString()),
+      decoration: BoxDecoration(
+        border: Border.all(color: Colors.white, width: 1),
+        color: Colors.blue
+      ),
+      width: widget.dimension,
+      height: widget.dimension,
+      //child: Text(widget.dimension.toString()),
     );
   }
 }

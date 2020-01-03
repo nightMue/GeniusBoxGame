@@ -16,7 +16,7 @@ class Empty extends StatelessWidget {
         shape: BoxShape.rectangle,
       ),
       child: Center(
-        child: Text(title),
+        //child: Text(title),
       ),
     );
   }

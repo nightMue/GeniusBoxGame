@@ -16,7 +16,7 @@ class Peg extends StatelessWidget {
         shape: BoxShape.circle,
       ),
       child: Center(
-        child: Text(title),
+        //child: Text(title),
       ),
     );
   }
